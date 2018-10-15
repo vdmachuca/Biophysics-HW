@@ -1,0 +1,11 @@
+function[ySol] = HW1part3
+    syms h(r)
+    syms r
+    Dh = diff(h,r)
+    ode = diff(h,r,2)/r+diff(h,r)/r^2 - r*diff(h,r,4) == 0;
+    cond1 = Dh(5) == 0;
+    cond2 = Dh(100) == 0;
+    cond3 = h(0) == 50;
+    conds = 
+    ySol(r) = dsolve(ode)
+end
